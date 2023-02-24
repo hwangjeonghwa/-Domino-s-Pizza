@@ -2,33 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html{scroll-behavior: smooth;}
 
 /* Top Button */
+
 .top{
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 20px;
+  bottom: 20px;
 }
 .top a{
   display: block;
-  width: 60px;
-  height: 60px;
-  background: url(../image/top.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  background: url(../image/topbtn1.png) no-repeat;
+  background-size: 60px;
   transition: 0.35s;
 }
-.top a:hover{background-image: url(../image/top_on.png);}
+.top a:hover{background-image: url(../image/topbtn2.png);}
 
 
-@keyframes circle{
-  0%{
-    transform: rotate(0);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
 @keyframes circle2{
   0%{
     transform:translateY(10px);
@@ -40,10 +40,13 @@ html{scroll-behavior: smooth;}
     transform:translateY(10px);
   }
 }
+
+
 body{
   font-family: 'Montserrat', sans-serif; 
   color: #333
 }
+
 
 /* Header__________________________________ */
 
@@ -97,6 +100,7 @@ main:hover{background-image: url(../image/main2.PNG);}
   animation: circle2 1.6s infinite;
 }
 
+
 /* Section__________________________________ */
 
 section{
@@ -111,6 +115,10 @@ section h2{
   color: #333;
   margin-top: 40px;
 }
+
+
+/* about_____________ */
+
 #about h2{
   margin-top: 150px;
 }
@@ -155,8 +163,12 @@ section h2{
   transition: 0.5s;
 }
 .ab_num ul li:hover{
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
+
+
+/* menu_____________  */
+
 #menu{
   width: 100%;
   height: 600px;
@@ -276,11 +288,13 @@ section h2{
 }
 
 
+/* event_____________  */
+
 #event{
   width: 100%;
   height: 600px;
   /* border: 1px solid #000; */
-  margin-top: 360px;
+  margin-top: 550px;
 }
 .gallery{
   width: 1200px;
@@ -329,8 +343,10 @@ section h2{
   transform-origin: left bottom;
 }
 .content h3{
-  font-size: 14px;
-  font-weight: bold;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 15px;
+  color: rgb(2, 51, 83);
+  font-weight: 400;
 }
 .content button{
   padding: 10px 30px;
@@ -349,6 +365,8 @@ section h2{
   font-weight: bold;
 }
 
+
+/* store_____________  */
 
 #store{
   width: 100%;
@@ -486,70 +504,67 @@ button{
 .btn2:hover{background-color: #000;}
 
 
+/* contact_____________  */
+
 #contact{
-  width: 1200px;
-  height: 500px;
-  margin-top: 80px;
-  text-align: center;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
-.square{display: flex;}
-.btitle{
+#contact h2{
+  margin-top: 100px;
+  padding-bottom: 20px;
   position: relative;
-  width: 250px;
-  height: 250px;
-  margin: auto;
-  margin-top: 80px;
-  margin-left: -80px;
 }
-.btitle span{
+.square{
+  height: 300px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(253, 233, 206);
+}
+.square li{
+  /* border: 1px solid #000; */
+  width: 200px;
+  height: 300px;
+  line-height: 90px; 
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.square li:before{ 
+  content: '';
   position: absolute;
-  width: inherit;
-  height: inherit;
-  border: 1px solid #333;
-  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  height: 220px;
+  background: url(../image/character.png) no-repeat center top; 
+  transition: 0.3s; 
+  background-size: 220px; 
 }
-
-.btitle span:nth-child(1){animation: circle 6s linear infinite;}
-.btitle span:nth-child(2){animation: circle 4s linear infinite reverse;}
-.btitle span:nth-child(3){animation: circle 10s linear infinite;}
-
-.btitle:hover span:nth-child(1){opacity: 0.3;}
-.btitle:hover span:nth-child(2){opacity: 0.6;}
-.btitle:hover span:nth-child(3){opacity: 0.8;}
-
-.btitle:nth-child(1):hover span{
-  background-color: crimson;
-  border: none;
-}
-.btitle:nth-child(2):hover span{
-  background-color: dodgerblue;
-  border: none;
-}
-.btitle:nth-child(3):hover span{
-  background-color: yellowgreen;
-  border: none;
-}
-.btitle:nth-child(4):hover span{
-  background-color: lightcoral;
-  border: none;
-}
-.btitle div{
-  /* border: 1px solid red; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(20%);
-  width: 70%;
-  text-align: center;
+.square li a{
   color: #333;
+  background: rgba(0, 0, 0, 0);
+  padding: 5px 12px;
+  font-size: 18px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.5s;
 }
 
+.square li:hover{background: rgba(248, 203, 233, 0.5);}
+.square li:hover a{
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.square li:hover:before{top: -50px;}
 
 
 /* Footer__________________________________ */
+
 footer{
   width: 100%;
   background-color: #333;
@@ -559,7 +574,14 @@ footer{
   text-align: left;
   color: #fff;
   padding: 40px 300px;
+  margin-top: 80px;
 }
 footer a{
   font-size: 18px;
 }
+footer strong{
+  color: crimson;
+  font-weight: 500;
+}
+
+
