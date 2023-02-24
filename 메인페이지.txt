@@ -112,7 +112,7 @@ Copyright&copy; Domino'sPizza.Allrights reserved.
 
 
 
-
+ex)
 .btitle{
   position: relative;
   width: 250px;
